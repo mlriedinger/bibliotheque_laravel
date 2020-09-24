@@ -17,8 +17,9 @@ class CreateLoansTable extends Migration
             $table->id();
             $table->foreignId('user_id')->references('id')->on('users')->constrained()->onDelete('cascade');
             $table->foreignId('books_id')->references('id')->on('books')->constrained()->onDelete('cascade');
-            $table->date('date_start');
-            $table->date('date_end');
+            $table->date('loan_start');
+            $table->date('loan_end');
+            $table->date('book_return')->nullable();
             $table->timestamps();
         });
     }

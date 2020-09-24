@@ -7,8 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class Loans extends Model
 {
   protected $fillable = [
-    'date_start',
-    'date_end',
+    'loan_start',
+    'loan_end',
+    'book_return',
   ];
 
   public function user()

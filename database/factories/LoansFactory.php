@@ -15,7 +15,7 @@ $factory->define(Loans::class, function (Faker $faker) {
     return [
         'user_id' => $random_user_id,
         'books_id' => $random_book_id,
-        'date_start' => $faker->date(),
-        'date_end'=> $faker->date(),
+        'loan_start' => $faker->date(),
+        'loan_end'=> $faker->dateTimeBetween('-4 years', 'now'),
     ];
 });

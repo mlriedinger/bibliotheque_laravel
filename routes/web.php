@@ -21,4 +21,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/books', 'BookController@index')->name('bookList');
+Route::get('/books', 'BookListController@index')->name('bookList');
+Route::name('show')->get('books/{book}', 'BookController');
+Route::get('/users', 'UsersListController@index')->name('usersList');
+Route::get('/currentLoans', 'currentLoansListController@index')->name('currentLoansList');
+Route::get('/addBook', 'addBookFormController@index')->name('addBookForm');
