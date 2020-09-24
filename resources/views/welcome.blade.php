@@ -86,9 +86,7 @@
 
                 <div class="links">
                     <a href="{{ route('bookList')}}">Liste des livres</a>
-                    <a href="{{ route('usersList') }}">Liste des emprunteurs</a>
-                    <a href="{{ route('currentLoansList') }}">Liste des emprunts en cours</a>
-                    <a href="{{ route('addBookForm') }}">Ajouter un livre</a>
+                    <a href="{{ route('users.index') }}">Liste des emprunteurs</a>
                 </div>
             </div>
         </div>

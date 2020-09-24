@@ -2,15 +2,15 @@
 
 @section('content')
     <div class="content">
-        <h1 class="title text-center mb-5 mt-5 text-uppercase">
+        <h2 class="title text-center mb-5 mt-5 text-uppercase">
             Détails
-        </h1>
+        </h2>
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-6">
 
                     <div class="card mb-4 text-center">
-                        <div class="card-header text-white bg-info">{{ $book->title }}</div>
+                        <div class="card-header text-white bg-dark">{{ $book->title }}</div>
 
                         <div class="card-body text-center">
                             <p>Auteur : {{ $book->author }}</p>
@@ -29,7 +29,7 @@
 
             <div class="row justify-content-center">
                 <div class="col text-center">
-                    <h2>Historique des emprunts</h2>
+                    <h2 class="text-uppercase">Historique des emprunts</h2>
                     @foreach ($loanHistory as $loan)
                         <p>Nom et prénom de l'emprunteur : {{ $loan->name }} {{ $loan->firstname }} </p>
                         <p>Date d'emprunt : {{ $loan->loan_start }} | Date de retour prévue : {{ $loan->loan_end }} | Date de retour effective : {{ $loan->book_return }}</p>

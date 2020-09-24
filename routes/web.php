@@ -21,8 +21,18 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+// Route pour l'affichage de la liste de livres
 Route::get('/books', 'BookListController@index')->name('bookList');
-Route::name('show')->get('books/{book}', 'BookController');
-Route::get('/users', 'UsersListController@index')->name('usersList');
-Route::get('/currentLoans', 'currentLoansListController@index')->name('currentLoansList');
-Route::get('/addBook', 'addBookFormController@index')->name('addBookForm');
+
+// Route pour l'affichage des détails d'un livre
+Route::name('showBookDetails')->get('books/{book}', 'BookController');
+
+// Route pour l'affichage de la liste des utilisateurs
+// Route::get('/users', 'UsersListController@index')->name('usersList');
+
+// Route pour accéder au formulaire de modification d'un utilisateur
+// Route::name('editUser')->get('users/{user}', 'EditUserController');
+Route::resource('users', 'UsersListController');
+
+

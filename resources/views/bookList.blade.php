@@ -10,12 +10,12 @@
                 <div class="col-6">
                     @foreach ($books as $book)
                         <div class="card mb-4 text-center">
-                            <div class="card-header text-white bg-info">{{ $book->title }}</div>
+                            <div class="card-header text-white bg-dark">{{ $book->title }}</div>
 
                             <div class="card-body text-center">
                                 <p>Auteur : {{ $book->author }}</p>
                                 <p>N°ISBN : {{ $book->isbn }}</p>
-                                <a href="{{route('show', $book->id)}}"><button type="button" class="btn btn-light">Détails</button></a>
+                                <a href="{{route('showBookDetails', $book->id)}}"><button type="button" class="btn btn-light">Détails</button></a>
                                 <button type="button" class="btn btn-dark">Réserver</button>
                             </div>
                         </div>
